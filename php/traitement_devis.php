@@ -7,6 +7,7 @@ $email = $_POST['email'];
 $largeur = $_POST['largeur'];
 $hauteur = $_POST['hauteur'];
 $description = $_POST['description'];
+$support = $_POST['support'];
 
 $stmt = $pdo->prepare("
     INSERT INTO devis (
@@ -15,7 +16,7 @@ $stmt = $pdo->prepare("
         largeur,
         hauteur,
         description,
-        support
+        type_support
     )
     VALUES (
         :nom,
@@ -32,7 +33,8 @@ $stmt->execute([
     'email' => $email,
     'largeur' => $largeur,
     'hauteur' => $hauteur,
-    'description' => $description
+    'description' => $description,
+    'type_support' => $support
 ]);
 
 echo "Devis enregistré";

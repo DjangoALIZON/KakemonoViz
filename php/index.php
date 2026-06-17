@@ -30,6 +30,17 @@
 
     <br><br>
 
+    <label>Type de support :</label>
+    <select name="support" id="support" required>
+        <option value="" disabled selected>-- Sélectionnez un support --</option>
+        <option value="kakemono">Kakémonos</option>
+        <option value="rollup">Roll-ups</option>
+        <option value="banderole">Banderoles</option>
+        <option value="personnalise">Supports personalisés</option>
+    </select>
+
+    <br><br>
+
     <label>Description :</label>
     <textarea name="description"></textarea>
 

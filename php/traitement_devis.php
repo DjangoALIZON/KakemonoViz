@@ -14,14 +14,16 @@ $stmt = $pdo->prepare("
         email,
         largeur,
         hauteur,
-        description
+        description,
+        support
     )
     VALUES (
         :nom,
         :email,
         :largeur,
         :hauteur,
-        :description
+        :description,
+        :type_support
     )
 ");
 
